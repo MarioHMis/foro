@@ -1,8 +1,8 @@
-CREATE TABLE Usuario (
-                         id INT AUTO_INCREMENT PRIMARY KEY,
-                         nombre VARCHAR(100) NOT NULL,
-                         email VARCHAR(255) UNIQUE NOT NULL,
-                         contrasena VARCHAR(255) NOT NULL,
-                         perfiles INT,
-                         FOREIGN KEY (perfiles) REFERENCES Perfil(id)
+CREATE TABLE user (
+                      id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                      name VARCHAR(100) NOT NULL,
+                      email VARCHAR(150) NOT NULL UNIQUE,
+                      password VARCHAR(255) NOT NULL,
+                      role_id BIGINT NOT NULL,
+                      FOREIGN KEY (role_id) REFERENCES role(id)
 );

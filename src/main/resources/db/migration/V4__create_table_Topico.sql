@@ -1,11 +1,11 @@
-CREATE TABLE Topico (
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        titulo VARCHAR(255) NOT NULL,
-                        mensaje TEXT NOT NULL,
-                        fechaCreacion DATETIME DEFAULT CURRENT_TIMESTAMP,
-                        status ENUM('abierto', 'cerrado') DEFAULT 'abierto',
-                        autor INT,
-                        curso INT,
-                        FOREIGN KEY (autor) REFERENCES Usuario(id),
-                        FOREIGN KEY (curso) REFERENCES Curso(id)
+CREATE TABLE topic (
+                       id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                       title VARCHAR(200) NOT NULL,
+                       message TEXT NOT NULL,
+                       creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                       status VARCHAR(20) NOT NULL,
+                       author_id BIGINT NOT NULL,
+                       course_id BIGINT NOT NULL,
+                       FOREIGN KEY (author_id) REFERENCES user(id),
+                       FOREIGN KEY (course_id) REFERENCES course(id)
 );

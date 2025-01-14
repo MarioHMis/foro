@@ -1,5 +1,5 @@
-CREATE TABLE Curso (
-                       id INT AUTO_INCREMENT PRIMARY KEY,
-                       nombre VARCHAR(100) NOT NULL,
-                       categoria VARCHAR(100)
+CREATE TABLE course (
+                        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(100) NOT NULL,
+                        category VARCHAR(100) NOT NULL
 );
